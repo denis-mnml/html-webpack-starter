@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <%
+  var data = {
+  heading: 'Hello header',
+  copyright: '&copy; Copyright'
+  };
+
+  var title = 'HTML Webpack Starter'
+
+  %>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x316" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" type="image/png" href="img/favicon/site.webmanifest">
+  <title><%= title %></title>
+</head>
+
+<body>
+
+<%= _.template(require('./includes/header.html'))(data) %>
+
+<main class="main py-10">
+  <div class="container">
+    <h1><%= title %></h1>
+    <p class="text-secondary">Starting HTML template based on Webpack 4: </p>
+    <ul>
+      <li>Sass|Scss to CSS</li>
+      <li>HTML with lodash templating</li>
+    </ul>
+
+  </div>
+</main>
+<%= _.template(require('./includes/footer.html'))(data) %>
+</body>
+</html>
+
+

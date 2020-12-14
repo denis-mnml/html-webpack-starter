@@ -1,0 +1,18 @@
+.container, .container-fluid
+	width: 100%
+	padding-right: $gutter / 2
+	padding-left: $gutter / 2
+	margin-right: auto
+	margin-left: auto
+
+.row
+	display: flex
+	flex-wrap: wrap
+	margin-right: -$gutter / 2
+	margin-left: -$gutter / 2
+
+@each $breakpoint, $size in $container-max-widths
+	@include media-breakpoint-up($breakpoint)
+		.container
+			max-width: $size
+
